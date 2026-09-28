@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#16181a">
+<title>最近妻が冷たくてさあ</title>
+<meta name="description" content="同僚の、ただの夫婦の愚痴。短編会話ノベル。">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="stage">
+
+  <!-- 背景（2枚でクロスフェード） -->
+  <div id="bgwrap">
+    <div class="bg" id="bgA"><div class="cam"><div class="pic"></div></div></div>
+    <div class="bg" id="bgB"><div class="cam"><div class="pic"></div></div></div>
+  </div>
+  <div id="grain"></div>
+  <div id="vignette"></div>
+
+  <!-- タイトル -->
+  <section id="title" class="layer">
+    <div class="title-inner">
+      <h1>最近妻が<br class="sp">冷たくてさあ</h1>
+      <p class="sub">― 同僚の、ただの夫婦の愚痴 ―</p>
+      <button id="startBtn" class="btn">はじめる</button>
+      <p class="note">マウス（クリック）だけで遊べます ／ 約4分</p>
+    </div>
+  </section>
+
+  <!-- 日付カード -->
+  <section id="daycard" class="layer">
+    <div class="dc-date"></div>
+    <div class="dc-day"></div>
+    <div class="dc-time"></div>
+  </section>
+
+  <!-- 会話 -->
+  <section id="talk" class="layer">
+    <div id="choices"></div>
+    <div id="box">
+      <div id="name"></div>
+      <div id="text"></div>
+      <div id="next">▼</div>
+    </div>
+  </section>
+
+  <!-- スマホ -->
+  <section id="phone" class="layer">
+    <div class="phone">
+      <div class="ph-status"><span id="phClock">12:17</span><span>▂▄▆ 64%</span></div>
+      <div class="ph-head">ニュース</div>
+      <div class="ph-tabs"><span>トップ</span><span class="on">地域</span><span>天気</span><span>スポーツ</span></div>
+      <div class="ph-body" id="phList">
+        <button class="ph-item" data-dummy="1">
+          <span class="ph-ttl">週末は各地で冷え込み　北部で初霜</span>
+          <span class="ph-meta">天気　・　2時間前</span>
+        </button>
+        <button class="ph-item" id="phTarget">
+          <span class="ph-ttl">住宅で女性の遺体　同居の夫と連絡取れず</span>
+          <span class="ph-meta">地域　・　昨日 18:40</span>
+        </button>
+        <button class="ph-item" data-dummy="1">
+          <span class="ph-ttl">駅前再開発、来春にも着工へ　市が計画案</span>
+          <span class="ph-meta">地域　・　5時間前</span>
+        </button>
+        <button class="ph-item" data-dummy="1">
+          <span class="ph-ttl">市立図書館、改修で11月から一時休館</span>
+          <span class="ph-meta">地域　・　昨日</span>
+        </button>
+      </div>
+      <article class="ph-body" id="phArticle">
+        <div class="ph-cat">地域</div>
+        <h2>住宅で女性の遺体<br>同居の夫と連絡取れず</h2>
+        <div class="ph-date">10月12日 18:40</div>
+        <p>12日午後、市内東町の住宅で、この家に住む40代の女性が死亡しているのが見つかった。</p>
+        <p>目立った外傷はなく、死後1週間以上が経過しているとみられる。</p>
+        <p>警察は、同居する40代の夫と連絡が取れていないとして、行方を捜している。</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- 暗転・エンド -->
+  <section id="blackout" class="layer"></section>
+  <section id="end" class="layer">
+    <div class="end-inner">
+      <p class="end-title">最近妻が冷たくてさあ</p>
+      <p class="end-mark">END</p>
+      <div class="end-btns">
+        <button id="againBtn" class="btn">もう一度</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 履歴 -->
+  <button id="logBtn" class="hudbtn" title="会話履歴">履歴</button>
+  <section id="log" class="layer">
+    <div class="log-inner">
+      <div class="log-list" id="logList"></div>
+      <button id="logClose" class="btn small">閉じる</button>
+    </div>
+  </section>
+</div>
+<script src="game.js"></script>
+</body>
+</html>
